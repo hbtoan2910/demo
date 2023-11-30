@@ -16,5 +16,5 @@ A springboot demo application with simple API (CRUD operations) connecting to po
      > Data Access layer (interface StudentRepository)
      
    - Create 1 more table 'teacher' to test together with table 'student' to understand clearer about GENERATEDTYPE.SEQUENCE (allocationSize attribute)
-   - 
+
    - If using @Transactional for method, then no need to use JPARepository methods, just use entity 's set method to update data in database (save, saveAll, findbyId, findAll, ...)
