@@ -33,6 +33,24 @@ public class StudentController {
 //		this.studentService = studentService;
 //	}
 	
+	@GetMapping(value = "/greet")
+	public GreetResponse greet() {
+		GreetResponse gr = new GreetResponse(
+																		"HELLO RYAN BÉO Ú", 
+																		List.of("Java", "Javascript", "Python", "Php", "C#"), 
+																		new Person("Kent Nguyen", 38, 55000)
+	);
+		System.out.println(gr);
+		return gr;
+	}
+	
+	record Person(String name, int age, double savings) { };
+	record GreetResponse(
+										 String greet,
+										 List<String> favProgrammingLanguages,
+										 Person person
+	) {	};
+	
 	@GetMapping
 	public List<Student> getStudents() {
 		return studentService.getStudents();
